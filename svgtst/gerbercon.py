@@ -26,10 +26,11 @@ for i in range(len(gerblin)):
                 print(atribs[gerblin[i][3:6]])
     elif gerblin[i][0]=='D':
         j=i+1
-        block=[gerblin[i][0:3]]
+        size=len(parts)
+        parts[size]=gerblin[i][0:3]
         while gerblin[j][0]=='X':
-            print(gerblin[j][0],j)
-            print(gerblin[i][0:3])
+            parts[size].append(gerblin[j][1:units+decimals])
+            parts[size].append(gerblin[j][8:2*(units+decimals)])
             j+=1
     else:
         continue
