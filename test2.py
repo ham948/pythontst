@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-print("hello world")
-print("\nhello again")
-
-#test github
+import os
+from pathlib import Path
+os.makedirs('./hello')
